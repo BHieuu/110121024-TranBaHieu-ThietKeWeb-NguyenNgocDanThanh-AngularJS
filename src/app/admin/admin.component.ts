@@ -7,14 +7,5 @@ import { Router } from '@angular/router';
   styleUrl: './admin.component.scss',
 })
 export class AdminComponent {
-  constructor(private router: Router) {}
-  manageMovies() {
-    this.router.navigate(['manage-movies']);
-  }
-  manageUsers() {
-    this.router.navigate(['manage-users']);
-  }
-  logOut() {
-    this.router.navigate(['login']);
-  }
+
 }

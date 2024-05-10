@@ -13,6 +13,8 @@ import { HeaderComponent } from './header/header.component';
 import { LoginComponent } from './login/login.component';
 import { ManageMoviesComponent } from './manage-movies/manage-movies.component';
 import { ManageUsersComponent } from './manage-users/manage-users.component';
+import { NavAdminComponent } from './nav-admin/nav-admin.component';
+import { AllMoviesTrendingComponent } from './all-movies-trending/all-movies-trending.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,8 @@ import { ManageUsersComponent } from './manage-users/manage-users.component';
     LoginComponent,
     ManageMoviesComponent,
     ManageUsersComponent,
+    NavAdminComponent,
+    AllMoviesTrendingComponent,
   ],
   imports: [
     BrowserModule,

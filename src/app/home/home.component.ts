@@ -47,4 +47,7 @@ export class HomeComponent implements OnInit {
   goToMovie(type: string, id: string) {
     this.router.navigate(['movie', type, id]);
   }
+  allMoviesTreding() {
+    this.router.navigate(['all-movies-trending']);
+  }
 }
