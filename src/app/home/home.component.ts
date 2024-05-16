@@ -50,4 +50,10 @@ export class HomeComponent implements OnInit {
   allMoviesTreding() {
     this.router.navigate(['all-movies-trending']);
   }
+  allMoviesTheatre() {
+    this.router.navigate(['all-movies-theatre']);
+  }
+  allMoviesPopular() {
+    this.router.navigate(['all-movies-popular']);
+  }
 }

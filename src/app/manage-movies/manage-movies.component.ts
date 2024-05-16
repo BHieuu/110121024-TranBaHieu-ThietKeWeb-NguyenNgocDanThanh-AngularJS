@@ -39,4 +39,7 @@ export class ManageMoviesComponent {
         this.popularMovies = movies;
       });
   }
+  goToMovie(type: string, id: string) {
+    this.router.navigate(['movie', type, id]);
+  }
 }

@@ -7,6 +7,8 @@ import { AdminComponent } from './admin/admin.component';
 import { ManageUsersComponent } from './manage-users/manage-users.component';
 import { ManageMoviesComponent } from './manage-movies/manage-movies.component';
 import { AllMoviesTrendingComponent } from './all-movies-trending/all-movies-trending.component';
+import { AllMoviesTheatreComponent } from './all-movies-theatre/all-movies-theatre.component';
+import { AllMoviesPopularComponent } from './all-movies-popular/all-movies-popular.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -17,6 +19,8 @@ const routes: Routes = [
   { path: 'manage-users', component: ManageUsersComponent },
   { path: 'manage-movies', component: ManageMoviesComponent },
   { path: 'all-movies-trending', component: AllMoviesTrendingComponent },
+  { path: 'all-movies-theatre', component: AllMoviesTheatreComponent },
+  { path: 'all-movies-popular', component: AllMoviesPopularComponent },
 ];
 
 @NgModule({

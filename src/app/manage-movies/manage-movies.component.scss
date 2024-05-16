@@ -1,0 +1,52 @@
+.movie-management {
+  width: 600px; /* Điều chỉnh chiều rộng theo yêu cầu */
+  margin: auto;
+  font-family: Arial, sans-serif;
+}
+
+.movie-management h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 0.5em;
+}
+
+.notice {
+  font-size: 0.8em;
+  color: gray;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.movie-list {
+  background: #f0f0f0;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.movie-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  border-bottom: 1px solid #ccc;
+}
+
+.movie-item:last-child {
+  border-bottom: none;
+}
+
+.movie-item span {
+  font-size: 16px;
+}
+
+button {
+  padding: 5px 10px;
+  background-color: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: darkred;
+}

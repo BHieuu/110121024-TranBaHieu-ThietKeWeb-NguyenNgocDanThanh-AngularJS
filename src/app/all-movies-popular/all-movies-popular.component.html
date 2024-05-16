@@ -1,11 +1,11 @@
 <app-header></app-header>
 <div class="movies-thumbnail">
-  <div class="movie" *ngFor="let movie of trendingMovies">
-    <div class="cover" (click)="goToMovie('trending', movie.id)">
+  <div class="movie" *ngFor="let movie of popularMovies">
+    <div class="cover" (click)="goToMovie('popular', movie.id)">
       <img [src]="movie.cover" alt="" />
     </div>
     <div class="detail">
-      <div class="name" (click)="goToMovie('trending', movie.id)">
+      <div class="name" (click)="goToMovie('popular', movie.id)">
         {{ movie.name }}
       </div>
       <div class="rating">
