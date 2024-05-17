@@ -15,29 +15,50 @@
       </div>
     </div>
     <div class="right">
-      <div class="title">Đánh giá phim</div>
-      <div class="rating-form">
-        <div class="form-group">
-          <label for="uname">Họ và Tên</label>
-          <input type="text" name="uname" class="form-control" />
-        </div>
-        <div class="form-group">
-          <label for="rating">Đánh giá</label>
-          <div class="rating">
-            <app-star-rating
-              [rating]="0"
-              [isReadOnly]="false"
-            ></app-star-rating>
+      <div class="title"><h4>Đánh giá phim</h4></div>
+      <form (ngSubmit)="onSubmit()" #reviewForm="ngForm">
+        <div class="rating-form">
+          <div class="form-group">
+            <label for="uname">Họ và Tên</label>
+            <input
+              type="text"
+              name="uname"
+              class="form-control"
+              [(ngModel)]="review.author"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="rating">Đánh giá</label>
+            <div class="rating">
+              <app-star-rating
+                [rating]="review.rating"
+                [isReadOnly]="false"
+                (rate)="review.rating = $event"
+              ></app-star-rating>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="review">Mô tả</label>
+            <textarea
+              name="review"
+              rows="3"
+              class="form-control"
+              [(ngModel)]="review.review"
+              required
+            ></textarea>
+          </div>
+          <div class="btn-container">
+            <button
+              class="btn btn-dark"
+              type="submit"
+              [disabled]="!reviewForm.form.valid"
+            >
+              Xác nhận
+            </button>
           </div>
         </div>
-        <div class="form-group">
-          <label for="review">Mô tả</label>
-          <textarea name="review" rows="3" class="form-control"></textarea>
-        </div>
-        <div class="btn-container">
-          <button class="btn btn-dark">Xác nhận</button>
-        </div>
-      </div>
+      </form>
     </div>
   </div>
   <div class="bottom">
@@ -61,7 +82,7 @@
             </div>
           </div>
         </div>
-        <div class="review-text"></div>
+        <div class="review-text">{{ review.review }}</div>
       </div>
     </div>
     <div class="reviews" *ngIf="movie?.reviews?.length === 0">
@@ -69,3 +90,4 @@
     </div>
   </div>
 </div>
+<app-footer></app-footer>

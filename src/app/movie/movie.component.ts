@@ -13,6 +13,12 @@ export class MovieComponent implements OnInit {
   url = '';
   movies: any;
   movie: any;
+  review: any = {
+    author: '',
+    rating: 0,
+    review: '',
+    published_on: new Date().toISOString().split('T')[0], // Ngày hiện tại
+  };
 
   constructor(private route: ActivatedRoute, private http: HttpClient) {}
 
@@ -41,5 +47,17 @@ export class MovieComponent implements OnInit {
         this.movie = this.movies[index];
       }
     });
+  }
+
+  onSubmit() {
+    if (this.movie && this.movie.reviews) {
+      this.movie.reviews.push({ ...this.review });
+      this.review = {
+        author: '',
+        rating: 0,
+        review: '',
+        published_on: new Date().toISOString().split('T')[0],
+      };
+    }
   }
 }

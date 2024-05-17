@@ -17,6 +17,7 @@ import { NavAdminComponent } from './nav-admin/nav-admin.component';
 import { AllMoviesTrendingComponent } from './all-movies-trending/all-movies-trending.component';
 import { AllMoviesTheatreComponent } from './all-movies-theatre/all-movies-theatre.component';
 import { AllMoviesPopularComponent } from './all-movies-popular/all-movies-popular.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { AllMoviesPopularComponent } from './all-movies-popular/all-movies-popul
     AllMoviesTrendingComponent,
     AllMoviesTheatreComponent,
     AllMoviesPopularComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

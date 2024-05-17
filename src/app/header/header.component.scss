@@ -6,12 +6,20 @@
   align-items: center;
   justify-content: space-between;
 }
-.logo {
+.logo-icon {
   font-size: 24px;
   font-weight: bold;
   font-family: "Netflix Sans", sans-serif;
   letter-spacing: 4px;
   margin-left: 40px;
+  cursor: pointer;
+}
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: "Netflix Sans", sans-serif;
+  letter-spacing: 4px;
+  margin-right: 650px;
   cursor: pointer;
 }
 .logout {
